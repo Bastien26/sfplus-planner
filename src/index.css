@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #111318;
+  --color-panel: #191c22;
+  --color-panel-2: #21252d;
+  --color-line: #2c313b;
+  --color-fg: #e7e9ee;
+  --color-muted: #959dab;
+  --color-accent: #fa9549;
+  --color-accent-strong: #ff7a1a;
+  --color-fluid: #62b6ff;
+  --color-warn: #f2c14e;
+  --color-bad: #ff6b6b;
+  --color-good: #5ed39a;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+.field {
+  @apply rounded-md border border-line bg-bg px-2 py-1.5 outline-none focus:border-accent;
+}
+
+.btn {
+  @apply inline-flex items-center gap-1.5 rounded-md border border-line bg-panel-2 px-3 py-1.5 text-sm hover:border-accent hover:text-accent disabled:opacity-40;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-1.5 rounded-md bg-accent px-3 py-1.5 text-sm font-semibold text-black hover:bg-accent-strong;
+}
+
+.panel {
+  @apply rounded-lg border border-line bg-panel;
+}
